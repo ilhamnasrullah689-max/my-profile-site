@@ -1,122 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <style>
-        body {
-            background-color: #000000; /* Black theme */
-            color: #FFFFFF; /* White text for contrast */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(to right, #FF0000, #FFD700); /* Red to gold gradient */
-            padding: 20px;
-            text-align: center;
-            color: #000000; /* Black text on gradient */
-        }
-        .profile {
-            padding: 20px;
-            text-align: center;
-        }
-        .ongoing {
-            padding: 20px;
-            border-top: 2px solid #FFD700; /* Gold border */
-        }
-        .ongoing h2 {
-            color: #FF0000; /* Red heading */
-        }
-        .contact {
-            padding: 20px;
-            text-align: center;
-        }
-        .robot-email {
-            font-size: 1.2em;
-            color: #FFD700; /* Gold for robot email */
-        }
-        .spotify {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #333333;
-            padding: 10px;
-            text-align: center;
-            color: #FFFFFF;
-        }
-        .spotify-status {
-            font-weight: bold;
-        }
-        .online {
-            color: #00FF00; /* Green for online */
-        }
-        .offline {
-            color: #FF0000; /* Red for offline */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ilham Nasrullah</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#FFFFF0;
+    color:#000;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px 10px 0 10px;
+}
+
+h1{
+    margin:0;
+    font-weight:700;
+}
+
+/* Layout Utama */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:40px;
+    padding:25px;
+}
+
+/* GRID KIRI */
+.left-side{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.grid{
+    width:320px;
+    height:240px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:10px;
+}
+
+.box{
+    background:#fff;
+    border-radius:12px;
+    padding:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.4s ease;
+    opacity:.9;
+}
+.box h2{
+    margin:0 0 6px;
+    font-size:15px;
+    font-weight:600;
+}
+.box p{
+    font-size:13px;
+}
+
+.active{
+    transform:scale(1.1);
+    opacity:1;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* Kolom kanan foto */
+.right-side{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.photo img{
+    width:300px;
+    height:240px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+/* Spotify center */
+.spotify-center{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+/* Footer */
+footer{
+    margin-top:auto;
+    padding:60px 0;
+    text-align:center;
+    font-weight:600;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .container{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>My Profile</h1>
-        <p>Welcome to my personal page</p>
-    </header>
 
-    <section class="profile">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
-labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-aliquip ex ea commodo consequat.</p>
-    </section>
+<header>
+    <h1>Ilham Nasrullah 53</h1>
+    <p>Selamat datang di halaman Web Saya.</p>
+</header>
 
-    <section class="ongoing">
-        <h2>On Going Projects</h2>
-        <div>
-            <h3>Project 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
-labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-aliquip ex ea commodo consequat.</p>
+
+<div class="container">
+
+    <!-- KIRI: BLOK + SPOTIFY -->
+    <div class="left-side">
+
+        <div class="grid">
+            <div class="box cycle active">
+                <h2>Tentang Saya</h2>
+                <p>Saya Ilham, suka belajar hal baru.</p>
+            </div>
+
+            <div class="box cycle">
+                <h2>Pengalaman</h2>
+                <p>Pernah mengerjakan beberapa project.</p>
+            </div>
+
+            <div class="box cycle">
+                <h2>Keahlian</h2>
+                <p>HTML • CSS • JavaScript.</p>
+            </div>
+
+            <div class="box cycle">
+                <h2>Proyek</h2>
+                <p>Beberapa portfolio sedang dibuat.</p>
+            </div>
         </div>
-        <div>
-            <h3>Project 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut 
-labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-aliquip ex ea commodo consequat.</p>
+
+        <!-- SPOTIFY CENTER -->
+        <div class="spotify-center">
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/0I3I9hgBRat6HR5Gzy26jx?utm_source=generator"
+                width="320" height="152" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media">
+            </iframe>
         </div>
-    </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p class="robot-email">🤖 Email: robot@example.com</p>
-    </section>
-
-    <div class="spotify">
-        <p>Spotify Status: <span id="spotify-status" class="spotify-status offline">Offline</span></p>
-        <p id="now-playing">Not playing anything</p>
     </div>
 
-    <script>
-        // Simulate Spotify status (randomly online/offline for demo)
-        function updateSpotifyStatus() {
-            const statuses = [
-                { status: 'online', song: 'Now Playing: Song Title - Artist' },
-                { status: 'offline', song: 'Not playing anything' }
-            ];
-            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
-            const statusElement = document.getElementById('spotify-status');
-            const playingElement = document.getElementById('now-playing');
-            
-            statusElement.textContent = randomStatus.status.charAt(0).toUpperCase() + 
-randomStatus.status.slice(1);
-            statusElement.className = `spotify-status ${randomStatus.status}`;
-            playingElement.textContent = randomStatus.song;
-        }
+    <!-- KANAN FOTO -->
+    <div class="right-side">
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+        </div>
+    </div>
 
-        // Update every 10 seconds for demo
-        setInterval(updateSpotifyStatus, 10000);
-        // Initial update
-        updateSpotifyStatus();
-    </script>
+</div>
+
+
+<footer>
+    © 2025 — Ilham Nasrullah 53 | All Right Reserved
+</footer>
+
+
+<script>
+const items = document.querySelectorAll(".cycle");
+let index = 0;
+
+function rotate(){
+    items.forEach(b=>b.classList.remove("active"));
+    items[index].classList.add("active");
+    index = (index + 1) % items.length;
+}
+
+setInterval(rotate,3000);
+</script>
+
 </body>
 </html>
